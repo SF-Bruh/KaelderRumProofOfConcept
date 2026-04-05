@@ -11,6 +11,20 @@
 </head>
 <body>
 
+    <!-- Password Gate -->
+    <div class="password-gate" id="passwordGate">
+        <div class="password-gate-content">
+            <span class="logo-icon" style="font-size: 2.5rem; color: var(--color-gold); margin-bottom: 16px; display: block;">&#9638;</span>
+            <h2 class="password-gate-title">Kælder<span style="color: var(--color-gold);">Rum</span></h2>
+            <p class="password-gate-subtitle">Indtast adgangskode for at fortsætte</p>
+            <form class="password-gate-form" id="passwordGateForm">
+                <input type="password" id="gatePassword" class="password-gate-input" placeholder="Adgangskode" autocomplete="off" autofocus>
+                <span class="password-gate-error" id="gateError"></span>
+                <button type="submit" class="btn btn-primary btn-block">Gå Videre</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">

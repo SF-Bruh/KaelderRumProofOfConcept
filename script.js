@@ -5,6 +5,29 @@
 (function () {
     'use strict';
 
+    // ---------- Password Gate ----------
+    const gate = document.getElementById('passwordGate');
+    const gateForm = document.getElementById('passwordGateForm');
+    const gateInput = document.getElementById('gatePassword');
+    const gateError = document.getElementById('gateError');
+    const PASS = 'antonogkochedrengen123';
+
+    if (gate && gateForm) {
+        document.body.style.overflow = 'hidden';
+
+        gateForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (gateInput.value === PASS) {
+                gate.classList.add('hidden');
+                document.body.style.overflow = '';
+            } else {
+                gateInput.classList.add('shake');
+                gateError.textContent = 'Forkert adgangskode. Prøv igen.';
+                setTimeout(() => gateInput.classList.remove('shake'), 400);
+            }
+        });
+    }
+
     // ---------- Intersection Observer: Reveal on Scroll ----------
     const revealObserver = new IntersectionObserver(
         (entries) => {
