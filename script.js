@@ -75,7 +75,7 @@
 
     // ---------- Hero Typing Effect ----------
     const typingTarget = document.getElementById('typingTarget');
-    const phrases = ['Beneath Your Feet.', 'In Every Basement.', 'Across Denmark.'];
+    const phrases = ['Under Dine Fødder.', 'I Hver Eneste Kælder.', 'Over Hele Danmark.'];
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -283,27 +283,27 @@
 
             // Full Name
             if (fullNameInput.value.trim().length < 2) {
-                setError(fullNameInput, 'fullNameError', 'Please enter your full name.');
+                setError(fullNameInput, 'fullNameError', 'Indtast venligst dit fulde navn.');
                 valid = false;
             }
 
             // Email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(emailInput.value.trim())) {
-                setError(emailInput, 'emailError', 'Please enter a valid email address.');
+                setError(emailInput, 'emailError', 'Indtast venligst en gyldig e-mailadresse.');
                 valid = false;
             }
 
             // Password
             if (passwordInput.value.length < 8) {
-                setError(passwordInput, 'passwordError', 'Password must be at least 8 characters.');
+                setError(passwordInput, 'passwordError', 'Adgangskoden skal være mindst 8 tegn.');
                 valid = false;
             }
 
             // Account type
             const accountType = form.querySelector('input[name="accountType"]:checked');
             if (!accountType) {
-                setFieldError('accountTypeError', 'Please select an account type.');
+                setFieldError('accountTypeError', 'Vælg venligst en kontotype.');
                 valid = false;
             } else {
                 document.getElementById('accountTypeError').textContent = '';
