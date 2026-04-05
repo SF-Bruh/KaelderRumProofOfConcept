@@ -1096,7 +1096,8 @@ img {
     -webkit-backdrop-filter: blur(20px);
 }
 
-.form-success.visible {
+.form-success.visible,
+.form-success.show {
     display: block;
     animation: fadeInUp 0.6s ease;
 }
